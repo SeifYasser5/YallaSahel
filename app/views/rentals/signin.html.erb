@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="650869901683-b5eobjmol8j16jruue69p9n2jko96jbd.apps.googleusercontent.com">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <%= javascript_include_tag('facebook.js') %>
+    <%= javascript_include_tag('google.js') %>
+  </head>
+  <body>
+
+    <!--FB button-->
+    <div id="facebook" class="fb-login-button" data-width="100" data-max-rows="1" data-size="medium" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+    
+    <br>
+    <br>
+
+    <!--Google buton-->
+    <div id="google" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+  
+    <!--Link to search-->
+    <p id="welcome" class="welcome" hidden="true"><%= link_to 'WELCOME ', '/rentals'%></p>
+      
+  </body>
+</html>

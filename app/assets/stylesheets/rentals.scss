@@ -1,0 +1,23 @@
+// Place all the styles related to the Rentals controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.welcome{
+	display: inline-block;
+	text-transform: uppercase;
+	color: blue;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table, th, td {
+  	border: 1px solid black;
+  	text-align: center;
+  	vertical-align: middle; 
+}
+
+.info{
+	display: block;
+}

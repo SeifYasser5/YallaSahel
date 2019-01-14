@@ -1,0 +1,40 @@
+ <html lang="en">
+    <head></head>
+    <body>
+
+        <!--Search form-->
+        <%=form_tag(action: "index") do%>
+        Destination: <%= text_field_tag(:destination) %>
+        Rooms: <%= number_field_tag("rooms", "1", in: 1...21, step: 1) %>
+        <%= submit_tag("Search") %>
+        <% end %>
+        
+        <br>
+
+        <!--Rentals table-->
+        <table>
+            <tr>
+                <th>Image</th>
+                <th>Url</th>
+                <th>Destination</th>
+                <th>Owner Name</th>
+                <th>Mobile Number</th>
+                <th>Rooms</th>
+                <th>Bathrooms</th>
+                <th>Link</th>
+            </tr>
+            <% @rentals.each do |rental| %>
+            <tr>
+                <td><%= image_tag(rental.destination+".jpg", size: "100x100")%></td>
+                <td><%= rental.url %></td>
+                <td><%= rental.destination %></td>
+                <td><%= rental.ownername %></td>
+                <td><%= rental.mobilenumber %></td>
+                <td><%= rental.rooms %></td>
+                <td><%= rental.bathrooms %></td>
+                <td><%= link_to 'Show', rental_path(rental) %></td>
+            </tr>
+            <% end %>
+        </table>
+    </body>
+</html>
