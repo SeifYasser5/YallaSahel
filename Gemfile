@@ -24,7 +24,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 #Organize an application’s JavaScript files into smaller more manageable chunks
-gem 'sprockets', '~> 3.7', '>= 3.7.2' #Update Solution
+gem 'sprockets', '~> 3.7', '>= 3.7.2' #Updated
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
