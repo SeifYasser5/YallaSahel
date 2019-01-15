@@ -7,8 +7,8 @@ ruby '2.5.3'
 gem 'rails', '~> 5.2.2'
 # Configures things like logging in your app to work on the platform
 gem 'rails_12factor', group: :production
-#Use Mysql as a database
-gem 'mysql2', '~> 0.5.2'
+#Use postgres as a database
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
