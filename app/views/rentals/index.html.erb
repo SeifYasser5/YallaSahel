@@ -37,7 +37,7 @@
             </tr>
             <% @rentals.each do |rental| %>
             <tr>
-                <!--<td><%= image_tag(rental.destination+".jpg", size: "100x100")%></td>-->
+                <td><%= image_tag(rental.destination+".jpg", size: "100x100")%></td>
                 <td><%= rental.url %></td>
                 <td><%= rental.destination %></td>
                 <td><%= rental.ownername %></td>
