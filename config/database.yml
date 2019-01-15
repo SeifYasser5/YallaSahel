@@ -7,11 +7,10 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: YallaSahel
+  database: d4q6br2jc54mkr
   pool: 5
-  username: postgres
-  password: root
-  socket: /tmp/mysql.sock
+  username: giuukcvrwtckoi
+  password: 447dc57c2b746d4d24c906e108b12c07615ffe194333bae2fde2317197beb699
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -19,17 +18,15 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: YallaSahel
+  database: d4q6br2jc54mkr
   pool: 5
-  username: postgres
-  password: root
-  socket: /tmp/mysql.sock
+  username: giuukcvrwtckoi
+  password: 447dc57c2b746d4d24c906e108b12c07615ffe194333bae2fde2317197beb699
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: YallaSahel
+  database: d4q6br2jc54mkr
   pool: 5
-  username: postgres
-  password: root
-  socket: /tmp/mysql.sock
+  username: giuukcvrwtckoi
+  password: 447dc57c2b746d4d24c906e108b12c07615ffe194333bae2fde2317197beb699
