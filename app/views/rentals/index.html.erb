@@ -57,7 +57,7 @@
         (function() {
             if (typeof(Storage) !== "undefined") {
                 if (sessionStorage.name) {
-                    document.getElementById("name").innerHtml = "Name: " + sessionStorage.name;
+                    document.getElementById("name").innerHtml = "Name: " + sessionStorage.getItem("name");
                 } else {
                     window.location.href = "https://yallasahel.herokuapp.com";
                 } 
