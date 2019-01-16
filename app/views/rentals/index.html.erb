@@ -14,6 +14,22 @@
     </head>
     <body>
 
+        <!--Check logged in-->
+        <script type="text/javascript">
+        (function(){
+            if (typeof(Storage) !== "undefined") {
+                if (sessionStorage.name) {
+                    document.getElementById("name").innerHtml = sessionStorage.name
+                } else {
+                    window.location.href = "https://yallasahel.herokuapp.com";
+                } 
+            }
+        })();
+        </script>
+
+        <!--Name-->
+        <div id="name"></div>
+
         <!--Search form-->
         <%=form_tag(action: "index") do%>
         Destination: <%= text_field_tag(:destination) %>

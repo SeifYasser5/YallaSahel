@@ -28,6 +28,9 @@
         FB.getLoginStatus(function(response) {
           if (response.status === 'connected') {
             FB.api('/me', function(res) {
+              if (typeof(Storage) !== "undefined") {
+                sessionStorage.name = res.name; 
+              }
               var text = document.getElementById("welcome").innerHTML;
               text = text.substring(0,31) + res.name;
               document.getElementById("welcome").innerHTML = text;
@@ -54,6 +57,9 @@
       function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
         var id_token = googleUser.getAuthResponse().id_token;
+        if (typeof(Storage) !== "undefined") {
+          sessionStorage.name = profile.getName(); 
+        }
         var text = document.getElementById("welcome").innerHTML;
         text = text.substring(0,31) + profile.getName();
         document.getElementById("welcome").innerHTML = text;
