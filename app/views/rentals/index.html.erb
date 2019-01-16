@@ -19,7 +19,7 @@
         (function(){
             if (typeof(Storage) !== "undefined") {
                 if (sessionStorage.name) {
-                    document.getElementById("name").innerHtml = sessionStorage.name
+                    document.getElementById("name").innerHtml = "Name: " + sessionStorage.name;
                 } else {
                     window.location.href = "https://yallasahel.herokuapp.com";
                 } 
@@ -28,7 +28,7 @@
         </script>
 
         <!--Name-->
-        <div id="name"></div>
+        <div id="name">Name: </div>
 
         <!--Search form-->
         <%=form_tag(action: "index") do%>
