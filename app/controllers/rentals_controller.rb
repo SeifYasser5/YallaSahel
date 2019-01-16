@@ -2,9 +2,9 @@ class RentalsController < ApplicationController
 	def index
     if (params.has_key?(:destination) && params.has_key?(:rooms))
   		if (params[:destination].length>0 && params[:rooms].length>0)
-          @rentals = Rental.where("destination like ?", "%#{params[:destination]}%").or(Rental.where(rooms: params[:rooms]))
+          @rentals = Rental.where("lower(destination) like ?", "%#{params[:destination].downcase}%").or(Rental.where(rooms: params[:rooms]))
       elsif (params[:destination].length>0)
-          @rentals = Rental.where("destination like ?", "%#{params[:destination]}%") 
+          @rentals = Rental.where("lower(destination) like ?", "%#{params[:destination].downcase}%") 
       elsif (params[:rooms].length>0)  
         @rentals = Rental.where(rooms: params[:rooms])
       else
