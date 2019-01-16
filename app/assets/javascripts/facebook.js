@@ -7,10 +7,14 @@ window.fbAsyncInit = function() {
     xfbml      : true,
     version    : 'v3.2'
   });
-  FB.api('/me', function(response) {
-    document.getElementById("welcome").innerHTML += response.name;
-    document.getElementById("welcome").removeAttribute("hidden");
-  }); 
+  FB.login(function(response) {
+   if (response.authResponse) {
+      FB.api('/me', function(response) {
+        document.getElementById("welcome").innerHTML += response.name;
+        document.getElementById("welcome").removeAttribute("hidden");
+      });
+    }
+  });
 };
 
 (function(d, s, id){
