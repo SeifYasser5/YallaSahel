@@ -2,19 +2,6 @@
     <head></head>
     <body>
 
-        <!--Check logged in-->
-        <script type="text/javascript">
-        (function(){
-            if (typeof(Storage) !== "undefined") {
-                if (sessionStorage.name) {
-                    document.getElementById("name").innerHtml = "Name: " + sessionStorage.name;
-                } else {
-                    window.location.href = "https://yallasahel.herokuapp.com";
-                } 
-            }
-        })();
-        </script>
-
         <!--Name-->
         <div id="name">Name: </div>
 
@@ -25,5 +12,19 @@
 		<div>Mobile Number: <%= @rental.mobilenumber %></div>
 		<div>Bathrooms: <%= @rental.bathrooms %></div>
 		<div>Rooms: <%= @rental.rooms %></div>
+
+        <!--Check logged in-->
+        <script type="text/javascript">
+        (function() {
+            if (typeof(Storage) !== "undefined") {
+                if (sessionStorage.name) {
+                    document.getElementById("name").innerHtml = "Name: " + sessionStorage.name;
+                } else {
+                    window.location.href = "https://yallasahel.herokuapp.com";
+                } 
+            }
+		})();
+        </script>
+
     </body>
 </html>
