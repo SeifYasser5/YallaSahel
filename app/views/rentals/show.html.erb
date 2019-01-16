@@ -2,9 +2,6 @@
     <head></head>
     <body>
 
-        <!--Name-->
-        <div id="name">Name: </div>
-
     	<!--Rental rooms-->
 		<div>Url: <%= @rental.url %></div>
 		<div>Destination: <%= @rental.destination %></div>
@@ -18,7 +15,6 @@
         (function() {
             if (typeof(Storage) !== "undefined") {
                 if (sessionStorage.name) {
-                    document.getElementById("name").innerHtml = "Name: " + sessionStorage.getItem("name");
                 } else {
                     window.location.href = "https://yallasahel.herokuapp.com";
                 } 
