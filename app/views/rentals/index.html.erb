@@ -17,7 +17,7 @@
         <!--Search form-->
         <%=form_tag(action: "index") do%>
         Destination: <%= text_field_tag(:destination) %>
-        Rooms: <%= number_field_tag("rooms", "1", in: 1...21, step: 1) %>
+        Rooms: <%= number_field_tag("rooms", "", in: 1...21, step: 1) %>
         <%= submit_tag("Search") %>
         <% end %>
         
